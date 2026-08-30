@@ -1,0 +1,31 @@
+class Dosen:
+    def __init__(self, nama, nidn, mata_kuliah):
+        self.nama = nama
+        self.nidn = nidn
+        self.mata_kuliah = mata_kuliah
+
+    def tampilkan_info(self):
+        print(f"Nama Dosen: {self.nama}")
+        print(f"NIDN: {self.nidn}")
+        print(f"Mata Kuliah: {self.mata_kuliah}")
+        print("---------------------------")
+
+    def update_mata_kuliah(self, mk_baru):
+            self.mk_baru = mk_baru
+            print("---------------------------")
+            print(f"Mata kuliah {self.nama} telah diperbarui menjadi: {self.mk_baru}")
+            print("---------------------------")
+            print(f"Nama Dosen: {self.nama}")
+            print(f"NIDN: {self.nidn}")
+            print(f"Mata Kuliah: {self.mk_baru}")
+            print("---------------------------")
+
+# 3 Object Dosen
+dosen1 = Dosen("Budi Santoso", "02324", "Pemrograman Python")
+dosen2 = Dosen("Siti Ranna", "02356", "Sistem Operasi")
+dosen3 = Dosen("Ahmad Rifai", "02378", "Basis Data")
+dosen1.tampilkan_info()
+dosen2.tampilkan_info()
+dosen3.tampilkan_info()
+dosen1.update_mata_kuliah("Pemrograman Lanjut")
+dosen2.update_mata_kuliah("Teori Komputasi")
